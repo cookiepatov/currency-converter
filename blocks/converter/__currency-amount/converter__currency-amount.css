@@ -1,0 +1,45 @@
+.converter__currency-amount {
+  height: 40px;
+  font-size: 22px;
+}
+
+.converter__currency-amount::-webkit-outer-spin-button,
+.converter__currency-amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.converter__currency-amount[type=number] {
+  -moz-appearance: textfield;
+}
+
+.converter__currency-amount:first-of-type {
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+
+.converter__currency-amount:last-of-type {
+  grid-row: 2/2;
+  grid-column: 3/3;
+}
+
+
+@media screen and (max-width:560px) {
+  .converter__currency-amount {
+    height: unset;
+    font-size: unset;
+  }
+}
+
+@media screen and (max-width:440px) {
+  .converter__currency-amount:first-of-type {
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+
+  .converter__currency-amount:last-of-type {
+    grid-row: 4/4;
+    grid-column: 1/1;
+  }
+
+}

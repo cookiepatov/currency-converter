@@ -1,0 +1,42 @@
+.converter__button {
+ background-color: #DDD8C4;
+ color: #393D3F;
+ cursor: pointer;
+ border: 1px solid transparent;
+ border-radius: 5px;
+ font-weight: 500;
+ height: 25px;
+}
+
+.converter__button:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+.converter__button:hover {
+  outline: none;
+  opacity: 0.8;
+}
+
+
+.converter__button:first-of-type {
+  grid-column: 1/1;
+}
+
+
+.converter__button:last-of-type {
+  grid-column: 3/3;
+}
+
+
+@media screen and (max-width:440px) {
+  .converter__button:first-of-type {
+    grid-column: 1/1;
+    grid-row: 2/2;
+  }
+
+  .converter__button:last-of-type {
+    grid-column: 1/1;
+    grid-row: 5/5;
+  }
+}

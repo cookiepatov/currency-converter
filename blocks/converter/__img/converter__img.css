@@ -1,0 +1,30 @@
+.converter__img {
+  justify-self: center;
+  grid-row: 2/4;
+  width: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  animation: rotation 4s ease-in-out infinite forwards;
+}
+
+
+
+@media screen and (max-width:440px) {
+  .converter__img {
+    grid-column: 1/1;
+    grid-row: 3/3;
+  }
+}
+
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

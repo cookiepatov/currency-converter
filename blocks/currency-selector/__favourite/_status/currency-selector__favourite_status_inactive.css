@@ -1,0 +1,10 @@
+.currency-selector__favourite_status_inactive {
+  opacity: 0;
+}
+
+
+@media screen and (max-width:560px) {
+  .currency-selector__favourite_status_inactive {
+    opacity: 0.1;
+  }
+}

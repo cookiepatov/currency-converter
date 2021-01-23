@@ -1,0 +1,10 @@
+.converter-section {
+  padding-top: 20px;
+}
+
+
+@media screen and (max-width:690px) {
+  .converter-section {
+    padding-top: 0;
+  }
+}

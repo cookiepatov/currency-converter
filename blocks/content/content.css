@@ -1,0 +1,15 @@
+.content {
+  background-color: #546A7B;
+  min-height: calc(100vh - 60px);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (max-width:440px) {
+  .content {
+    min-height: calc(100vh - 30px);
+  }
+
+}

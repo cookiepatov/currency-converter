@@ -1,0 +1,6 @@
+@media screen and (max-width:440px) {
+  .currency-selector_higher-position {
+    width: 100%;
+    top: 103px;
+  }
+}

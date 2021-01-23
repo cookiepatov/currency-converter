@@ -1,0 +1,30 @@
+.top-menu__icon {
+  width: 30px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.1s ease-in;
+}
+
+
+.top-menu__icon:first-of-type {
+  margin-right: 20px;
+}
+
+
+.top-menu__icon:last-of-type {
+  margin-left: 20px;
+}
+
+
+@media screen and (max-width:440px) {
+  .top-menu__icon {
+    width: 20px;
+  }
+  .top-menu__icon:first-of-type {
+    margin-right: 5px;
+  }
+
+
+  .top-menu__icon:last-of-type {
+    margin-left: 5px;
+  }
+}

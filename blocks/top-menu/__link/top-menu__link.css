@@ -1,0 +1,29 @@
+.top-menu__link {
+  height: 100%;
+  width: 50%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+
+.top-menu__link:hover {
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.top-menu__link:hover .top-menu__icon {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width:440px) {
+  .top-menu__link {
+    min-width: 160px;
+  }
+}

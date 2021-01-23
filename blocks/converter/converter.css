@@ -1,0 +1,31 @@
+.converter {
+  display: grid;
+  grid-template-columns: 300px 20px 300px;
+  gap: 10px;
+  background-color: #A3C9A8;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  max-width: 700px;
+}
+
+
+@media screen and (max-width:700px) {
+  .converter {
+    width: calc(100% - 20px);
+    grid-template-columns: 10fr 1fr 10fr;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+@media screen and (max-width:440px) {
+  .converter {
+    width: calc(100% - 20px);
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}

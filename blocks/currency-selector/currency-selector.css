@@ -1,0 +1,26 @@
+.currency-selector {
+  position: fixed;
+  top: 250px;
+  width: 690px;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 7px;
+  padding: 5px;
+}
+
+
+@media screen and (max-width:700px) {
+  .currency-selector {
+    width: calc(100% - 20px);
+    top: 225px;
+  }
+}
+
+
+@media screen and (max-width:560px) {
+  .currency-selector {
+    width: 100%;
+    top: 195px;
+  }
+}

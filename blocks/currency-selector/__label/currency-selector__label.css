@@ -1,0 +1,35 @@
+.currency-selector__label {
+  margin: 0;
+  opacity: 0.5;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.currency-selector__label:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100%;
+	height: 1px;
+	background: #00000054;
+	border: solid #FFF;
+  border-width: 0 10px;
+  margin-left: -100%;
+}
+
+
+.currency-selector__label:after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	width: 100%;
+	height: 1px;
+	background: #00000054;
+	border: solid #FFF;
+  border-width: 0 10px;
+  margin-right: -100%;
+}

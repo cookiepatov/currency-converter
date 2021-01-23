@@ -5,18 +5,385 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
-  <title></title>
+  <title>Конвертер валют</title>
 </head>
 <body class="body">
   <div class="root">
     <header class="header">
+      <nav class="top-menu">
+        <a href="#" class="top-menu__link">
+          <img src="./images/exchange.svg" alt="Конвертер" class="top-menu__icon">
+          Конвертер
+        </a>
+        <a href="./currency.html" class="top-menu__link">
+          Курсы валют
+          <img src="./images/currencies.svg" alt="Курсы валют" class="top-menu__icon">
+        </a>
+      </nav>
     </header>
-    <main>
+    <main class="content">
+      <section class="converter-section">
+          <form class="converter" name="converter">
+            <label class="converter__name">Перевод валюты</label>
+            <input type="number" step="0.01" min="0" name="currency-from" class="converter__currency-amount"></input>
+            <input type="number" step="0.01" name="currency-to" class="converter__currency-amount"></input>
+            <img class="converter__img" src="./images/exchange.svg" alt="Перевод валюты">
+            <button type="button" class="converter__button" id="currency-from-selector">Валюта</button>
+            <button type="button" class="converter__button" id="currency-to-selector">Валюта</button>
+          </form>
+    </section>
     </main>
     <footer class="footer">
     </footer>
+    <section class="currency-selector">
+      <div class="currency-selector__container">
+        <p class="currency-selector__label">Избранное</p>
+        <ul class="currency-selector__currency-list currency-selector__currency-list_type_favourites">
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+          </li>
+        </ul>
+        <p class="currency-selector__label">Все валюты</p>
+        <ul class="currency-selector__currency-list currency-selector__currency-list_type_all">
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_active"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+          <li class="currency-selector__item">
+            <button type="button" class="currency-selector__button">EUR</button>
+            <button type="button" class="currency-selector__favourite currency-selector__favourite_status_inactive"></button>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
-  <script src="./scripts/main.js"></script>
+  <script src="src/main.js" type="module"></script>
 </body>
 
 </html>
