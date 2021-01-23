@@ -21,6 +21,8 @@
 
 @import url(../blocks/footer/footer.css);
 
+@import url(../blocks/copyright/copyright.css);
+
 @import url(../blocks/currency-selector/currency-selector.css);
 @import url(../blocks/currency-selector/_hidden/currency-selector_hidden.css);
 @import url(../blocks/currency-selector/_higher-position/currency-selector_higher-position.css);
