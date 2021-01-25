@@ -10,7 +10,7 @@ const currencyListFavs = getElement('currency-selector__currency-list_type_favou
 const inputFrom = getElement('currency-from-amount','id');
 const inputTo = getElement('currency-to-amount','id');
 let currentData;
-//const currentRates = getData();
+const currentRates = getData();
 let currentRates = 1;
 let favourites = [];
 let currencyFrom = geoplugin_currencyCode();
@@ -19,10 +19,10 @@ let currentexchangeRate = 1;
 
 function updateCurrentRate()
 {
-/*   currentRates.then(rates=>{
+   currentRates.then(rates=>{
     currentexchangeRate = getCurrencyRate(rates['rates'][currencyFrom],rates['rates'][currencyTo]);
     updateResult();
-  }); */
+  });
 }
 
 function updateResult(e)
