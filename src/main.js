@@ -11,9 +11,8 @@ const inputFrom = getElement('currency-from-amount','id');
 const inputTo = getElement('currency-to-amount','id');
 let currentData;
 const currentRates = getData();
-let currentRates = 1;
 let favourites = [];
-let currencyFrom = geoplugin_currencyCode();
+let currencyFrom = 'RUB';/* geoplugin_currencyCode(); */
 let currencyTo = (currencyFrom==='USD') ? 'EUR': 'USD'
 let currentexchangeRate = 1;
 
