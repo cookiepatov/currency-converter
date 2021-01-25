@@ -1,8 +1,6 @@
 .currency-selector__item {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
-  display: flex;
-  justify-content: space-between;
 }
 
 

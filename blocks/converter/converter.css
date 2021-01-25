@@ -17,13 +17,13 @@
 .converter::after {
   content: '';
   position: absolute;
-  width: calc(100% - 7px);
-  height: calc(100% - 7px);
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   border-radius: 7px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid #546A7B;
   z-index: 1;
 
 }

@@ -1,5 +1,5 @@
 import getData from './api/converter.js';
-import {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById} from './utils/utils.js';
+import {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate} from './utils/utils.js';
 
 
 const btnFrom = getElement('currency-from-selector','id');
@@ -7,17 +7,47 @@ const btnTo = getElement('currency-to-selector','id');
 const currencySelector = getElement('currency-selector');
 const currencyListAll = getElement('currency-selector__currency-list_type_all');
 const currencyListFavs = getElement('currency-selector__currency-list_type_favourites');
+const inputFrom = getElement('currency-from-amount','id');
+const inputTo = getElement('currency-to-amount','id');
 let currentData;
+//const currentRates = getData();
+let currentRates = 1;
 let favourites = [];
 let currencyFrom = geoplugin_currencyCode();
 let currencyTo = (currencyFrom==='USD') ? 'EUR': 'USD'
+let currentexchangeRate = 1;
 
+function updateCurrentRate()
+{
+/*   currentRates.then(rates=>{
+    currentexchangeRate = getCurrencyRate(rates['rates'][currencyFrom],rates['rates'][currencyTo]);
+    updateResult();
+  }); */
+}
 
+function updateResult(e)
+{
+  if(e)
+  {
+
+    switch (e.target.id) {
+      case 'currency-from-amount' :
+        inputTo.value = (inputFrom.value / currentexchangeRate).toFixed(2);
+        break;
+      case 'currency-to-amount' :
+        inputFrom.value = (inputTo.value * currentexchangeRate).toFixed(2);
+        break;
+    }
+  }
+  else{
+    inputTo.value = (inputFrom.value / currentexchangeRate).toFixed(2);
+  }
+}
 function init()
 {
   btnFrom.textContent=currencyFrom;
   btnTo.textContent=currencyTo;
-  console.log();
+  updateCurrentRate();
   if(getLocalStorage())
   {
     favourites = getLocalStorage();
@@ -36,6 +66,9 @@ function init()
   })
   btnFrom.addEventListener('click',togglePopup);
   btnTo.addEventListener('click',togglePopup);
+  inputFrom.addEventListener('input',updateResult);
+  inputTo.addEventListener('input',updateResult);
+
 }
 
 function getLocalStorage()
@@ -104,8 +137,11 @@ function toggleFavouriteItem(item) {
 function addToFavourites(id, title) {
   const html = `
   <li class="currency-selector__item" id="${id}">
-    <button type="button" data="${id}" title="${title}" class="currency-selector__button">${id}</button>
-    <button type="button" data="${id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+    <div class="currency-selector__item-handlers">
+      <button type="button" data="${id}" title="${title}" class="currency-selector__button">${id}</button>
+      <button type="button" data="${id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+    </div>
+    <label class="currency-selector__item-name">${title}</label>
   </li>
   `
   currencyListFavs.insertAdjacentHTML('beforeend',html);
@@ -124,6 +160,7 @@ function setCurrency(currency) {
     btnTo.textContent = currency;
     currencyTo = currency;
   }
+  updateCurrentRate();
   togglePopup();
 }
 
@@ -137,8 +174,11 @@ function addCurrency(element) {
 
   const html = `
   <li class="currency-selector__item" id="${element.id}">
-    <button type="button"  data="${element.id}" title="${element.name}" class="currency-selector__button">${element.id}</button>
-    <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_${favourite}"></button>
+    <div class="currency-selector__item-handlers">
+      <button type="button"  data="${element.id}" title="${element.name}" class="currency-selector__button">${element.id}</button>
+      <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_${favourite}"></button>
+    </div>
+    <label class="currency-selector__item-name">${element.name}</label>
   </li>
   `
   currencyListAll.insertAdjacentHTML('beforeend',html);
@@ -147,8 +187,11 @@ function addCurrency(element) {
 function addFavourite(element) {
   const html = `
   <li class="currency-selector__item" id="${element.id}">
-    <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">${element.id}</button>
-    <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+    <div class="currency-selector__item-handlers">
+      <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">${element.id}</button>
+      <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
+    </div>
+    <label class="currency-selector__item-name">${element.name}</label>
   </li>
   `
   currencyListFavs.insertAdjacentHTML('beforeend',html);

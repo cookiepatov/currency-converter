@@ -5,6 +5,7 @@ async function  getData() {
   if (response.ok) {
     let json = await response.json();
     console.log(json);
+    return json;
   }
   else {
     alert("Ошибка HTTP: " + response.status);

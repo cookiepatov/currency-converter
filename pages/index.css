@@ -30,6 +30,8 @@
 @import url(../blocks/currency-selector/__label/currency-selector__label.css);
 @import url(../blocks/currency-selector/__currency-list/currency-selector__currency-list.css);
 @import url(../blocks/currency-selector/__item/currency-selector__item.css);
+@import url(../blocks/currency-selector/__item-handlers/currency-selector__item-handlers.css);
+@import url(../blocks/currency-selector/__item-name/currency-selector__item-name.css);
 @import url(../blocks/currency-selector/__item/_favourite/currency-selector__item_favourite.css);
 @import url(../blocks/currency-selector/__button/currency-selector__button.css);
 @import url(../blocks/currency-selector/__favourite/currency-selector__favourite.css);

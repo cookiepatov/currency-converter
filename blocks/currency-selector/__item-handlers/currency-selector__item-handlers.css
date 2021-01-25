@@ -1,0 +1,5 @@
+.currency-selector__item-handlers {
+  display: flex;
+  justify-content: space-between;
+
+}

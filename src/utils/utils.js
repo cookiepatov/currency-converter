@@ -46,10 +46,15 @@ function setFavourites(fullArray, favArray)
 async function getCurrenciesInfo(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`Ошибка загрузки магазинов. Адрес ${url} не отвечает. Статус: ${response.status}`)
+    throw new Error(`Ошибка. Адрес ${url} не отвечает. Статус: ${response.status}`)
   }
   return await response.json();
 
 }
 
-export {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById};
+
+function getCurrencyRate(fromRate, toRate) {
+  return fromRate/toRate;
+}
+
+export {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate};
