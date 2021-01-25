@@ -10,19 +10,6 @@
   border-right: none;
 }
 
-.currency-selector__item:last-of-type:nth-of-type(2){
-  border-right: none;
-}
-
-.currency-selector__item:last-of-type:nth-of-type(3){
-  border-right: none;
-}
-
-.currency-selector__item:last-of-type:nth-of-type(4){
-  border-right: none;
-}
-
-
 .currency-selector__item:hover .currency-selector__favourite_status_inactive {
   opacity: 0.2;
 }
@@ -47,9 +34,6 @@
   .currency-selector__item:nth-of-type(4n) {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
   }
-  .currency-selector__item:last-of-type:nth-of-type(4){
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-}
   .currency-selector__item:nth-of-type(3n) {
     border-right: none;
   }

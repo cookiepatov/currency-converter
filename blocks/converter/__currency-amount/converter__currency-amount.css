@@ -1,6 +1,7 @@
 .converter__currency-amount {
   height: 40px;
   font-size: 22px;
+  z-index: 2;
 }
 
 .converter__currency-amount::-webkit-outer-spin-button,

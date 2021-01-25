@@ -6,6 +6,7 @@
  border-radius: 5px;
  font-weight: 500;
  height: 25px;
+ z-index: 2;
 }
 
 .converter__button:focus {
@@ -14,8 +15,16 @@
 }
 
 .converter__button:hover {
-  outline: none;
   opacity: 0.8;
+}
+
+.converter__button:disabled {
+  background-color: #dbe7dd;
+  cursor: unset;
+}
+
+.converter__button:disabled:hover {
+  opacity: 1;
 }
 
 

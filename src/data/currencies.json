@@ -1,0 +1,177 @@
+[
+  {
+    "id":"RUB",
+    "name":"Российский рубль",
+    "favourite":0
+  },
+  {
+    "id":"AUD",
+    "name":"Австралийский доллар",
+    "favourite":0
+  },
+  {
+    "id":"AZN",
+    "name":"Азербайджанский манат",
+    "favourite":0
+  },
+  {
+    "id":"AMD",
+    "name":"Армянский драм",
+    "favourite":0
+  },
+  {
+    "id":"BYN",
+    "name":"Белорусский рубль",
+    "favourite":0
+  },
+  {
+    "id":"BGN",
+    "name":"Болгарский лев",
+    "favourite":0
+  },
+  {
+    "id":"BRL",
+    "name":"Бразильский реал",
+    "favourite":0
+  },
+  {
+    "id":"HUF",
+    "name":"Венгерский форинт",
+    "favourite":0
+  },
+  {
+    "id":"KRW",
+    "name":"Вона Республики Корея",
+    "favourite":0
+  },
+  {
+    "id":"HKD",
+    "name":"Гонконгский доллар",
+    "favourite":0
+  },
+  {
+    "id":"DKK",
+    "name":"Датская крона",
+    "favourite":0
+  },
+  {
+    "id":"USD",
+    "name":"Доллар США",
+    "favourite":0
+  },
+  {
+    "id":"EUR",
+    "name":"ЕВРО",
+    "favourite":0
+  },
+  {
+    "id":"INR",
+    "name":"Индийская рупия",
+    "favourite":0
+  },
+  {
+    "id":"KZT",
+    "name":"Казахстанский тенге",
+    "favourite":0
+  },
+  {
+    "id":"CAD",
+    "name":"Канадский доллар",
+    "favourite":0
+  },
+  {
+    "id":"KGS",
+    "name":"Киргизский сом",
+    "favourite":0
+  },
+  {
+    "id":"CNY",
+    "name":"Китайский юань Жэньминьби",
+    "favourite":0
+  },
+  {
+    "id":"MDL",
+    "name":"Молдавский лей",
+    "favourite":0
+  },
+  {
+    "id":"TMT",
+    "name":"Новый туркменский манат",
+    "favourite":0
+  },
+  {
+    "id":"NOK",
+    "name":"Норвежская крона",
+    "favourite":0
+  },
+  {
+    "id":"PLN",
+    "name":"Польский злотый",
+    "favourite":0
+  },
+  {
+    "id":"RON",
+    "name":"Румынский лей",
+    "favourite":0
+  },
+  {
+    "id":"XDR",
+    "name":"СДР",
+    "favourite":0
+  },
+  {
+    "id":"SGD",
+    "name":"Сингапурский доллар",
+    "favourite":0
+  },
+  {
+    "id":"TJS",
+    "name":"Таджикский сомони",
+    "favourite":0
+  },
+  {
+    "id":"TRY",
+    "name":"Турецкая лира",
+    "favourite":0
+  },
+  {
+    "id":"UZS",
+    "name":"Узбекский сум",
+    "favourite":0
+  },
+  {
+    "id":"UAH",
+    "name":"Украинская гривна",
+    "favourite":0
+  },
+  {
+    "id":"GBP",
+    "name":"Фунт стерлингов",
+    "favourite":0
+  },
+  {
+    "id":"CZK",
+    "name":"Чешская крона",
+    "favourite":0
+  },
+  {
+    "id":"SEK",
+    "name":"Шведская крона",
+    "favourite":0
+  },
+  {
+    "id":"CHF",
+    "name":"Швейцарский франк",
+    "favourite":0
+  },
+  {
+    "id":"ZAR",
+    "name":"Южноафриканский рэнд",
+    "favourite":0
+  },
+  {
+    "id":"JPY",
+    "name":"Японская йена",
+    "favourite":0
+  }
+]
