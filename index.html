@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Конвертер валют</title>
-  <!-- <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script> -->
 </head>
 <body class="body">
   <div class="root">
@@ -26,11 +25,15 @@
       <section class="converter-section">
           <form class="converter" name="converter">
             <label class="converter__name">Перевод валюты</label>
-            <input type="number" step="0.01" min="0" name="currency-from" class="converter__currency-amount" id="currency-from-amount"></input>
-            <input type="number" step="0.01" name="currency-to" class="converter__currency-amount" id="currency-to-amount"></input>
+            <input type="number" step="0.01" min="0" max="999999999999999999" name="currency-from" class="converter__currency-amount" id="currency-from-amount"></input>
+            <input type="number" step="0.01" min="0" max="999999999999999999" name="currency-to" class="converter__currency-amount" id="currency-to-amount"></input>
             <img class="converter__img" src="./images/exchange.svg" alt="Перевод валюты">
-            <button type="button" class="converter__button" id="currency-from-selector">Валюта</button>
-            <button type="button" class="converter__button" id="currency-to-selector">Валюта</button>
+            <button type="button" class="converter__button" id="currency-from-selector">
+              <img src="#" class="converter__button-img" alt="Иконка валюты">
+              Валюта</button>
+            <button type="button" class="converter__button" id="currency-to-selector">
+              <img src="#" class="converter__button-img" alt="Иконка валюты">
+              Валюта</button>
           </form>
     </section>
     </main>

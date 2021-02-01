@@ -1,5 +1,6 @@
 import getData from './api/converter.js';
-import {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate} from './utils/utils.js';
+import getUserInfo from './api/local.js'
+import {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate, getIconById} from './utils/utils.js';
 
 
 const btnFrom = getElement('currency-from-selector','id');
@@ -12,7 +13,7 @@ const inputTo = getElement('currency-to-amount','id');
 let currentData;
 const currentRates = getData();
 let favourites = [];
-let currencyFrom = 'RUB';/* geoplugin_currencyCode(); */
+let currencyFrom = 'EUR';
 let currencyTo = (currencyFrom==='USD') ? 'EUR': 'USD'
 let currentexchangeRate = 1;
 
@@ -44,9 +45,16 @@ function updateResult(e)
 }
 function init()
 {
-  btnFrom.textContent=currencyFrom;
-  btnTo.textContent=currencyTo;
+  inputFrom.value='0.00'
+  getUserInfo().then(userCurrency=>{
+    currencyFrom = userCurrency['currency']['code'];
+    btnFrom.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currencyFrom)}" class="converter__button-img" alt="Иконка валюты">
+    ${currencyFrom}`;
+    btnTo.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currencyTo)}" class="converter__button-img" alt="Иконка валюты">
+    ${currencyTo}`;
+  })
   updateCurrentRate();
+  getUserInfo();
   if(getLocalStorage())
   {
     favourites = getLocalStorage();
@@ -97,9 +105,11 @@ function setInputMode(mode='reset') {
     case 'currency-from-selector':
       btnTo.setAttribute("disabled", "true");
       getElement('currency-to-amount','id').setAttribute("disabled", "true");
+      getElement('currency-from-amount','id').setAttribute("disabled", "true");
       break;
     case 'currency-to-selector':
       btnFrom.setAttribute("disabled", "true");
+      getElement('currency-to-amount','id').setAttribute("disabled", "true");
       getElement('currency-from-amount','id').setAttribute("disabled", "true");
       break;
     case 'reset':
@@ -114,9 +124,10 @@ function toggleFavouriteItem(item) {
 
   const id = item.attributes.data.value;
   const title = getNameById(currentData, id);
+  const icon = getIconById(currentData, id);
   if(item.classList.contains('currency-selector__favourite_status_inactive'))
   {
-    addToFavourites(id, title);
+    addToFavourites(id, title, icon);
     item.classList.toggle('currency-selector__favourite_status_inactive');
     item.classList.toggle('currency-selector__favourite_status_active');
   }
@@ -133,11 +144,14 @@ function toggleFavouriteItem(item) {
   }
 }
 
-function addToFavourites(id, title) {
+function addToFavourites(id, title, icon) {
   const html = `
   <li class="currency-selector__item" id="${id}">
     <div class="currency-selector__item-handlers">
-      <button type="button" data="${id}" title="${title}" class="currency-selector__button">${id}</button>
+      <button type="button" data="${id}" title="${title}" class="currency-selector__button">
+        <img class="currency-selector__icon" alt="${title}" src="../images/country-icons/${icon}">
+        ${id}
+      </button>
       <button type="button" data="${id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
     </div>
     <label class="currency-selector__item-name">${title}</label>
@@ -151,12 +165,15 @@ function addToFavourites(id, title) {
 function setCurrency(currency) {
   if(btnTo.attributes.disabled)
   {
-    btnFrom.textContent = currency;
+    btnFrom.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
+    ${currency}`;
     currencyFrom = currency;
   }
   else
   {
-    btnTo.textContent = currency;
+
+    btnTo.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
+    ${currency}`;
     currencyTo = currency;
   }
   updateCurrentRate();
@@ -170,11 +187,13 @@ function updateLocalStorage()
 
 function addCurrency(element) {
   const favourite = element.favourite ? 'active' : 'inactive';
-
   const html = `
   <li class="currency-selector__item" id="${element.id}">
     <div class="currency-selector__item-handlers">
-      <button type="button"  data="${element.id}" title="${element.name}" class="currency-selector__button">${element.id}</button>
+      <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">
+        <img class="currency-selector__icon" alt="${element.name}" src="../images/country-icons/${element.icon}">
+        ${element.id}
+      </button>
       <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_${favourite}"></button>
     </div>
     <label class="currency-selector__item-name">${element.name}</label>
@@ -187,7 +206,10 @@ function addFavourite(element) {
   const html = `
   <li class="currency-selector__item" id="${element.id}">
     <div class="currency-selector__item-handlers">
-      <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">${element.id}</button>
+      <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">
+        <img class="currency-selector__icon" alt="${element.name}" src="../images/country-icons/${element.icon}">
+        ${element.id}
+      </button>
       <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
     </div>
     <label class="currency-selector__item-name">${element.name}</label>
@@ -201,7 +223,7 @@ function currencyHandler(e) {
   {
     toggleFavouriteItem(e.target);
   }
-  if(e.target.classList.contains('currency-selector__button'))
+  if(e.target.classList.contains('currency-selector__button')||e.target.classList.contains('currency-selector__icon'))
   {
     setCurrency(e.target.attributes.data.value);
   }

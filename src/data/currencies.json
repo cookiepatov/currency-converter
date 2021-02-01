@@ -2,176 +2,211 @@
   {
     "id":"RUB",
     "name":"Российский рубль",
-    "favourite":0
-  },
-  {
-    "id":"AUD",
-    "name":"Австралийский доллар",
-    "favourite":0
-  },
-  {
-    "id":"AZN",
-    "name":"Азербайджанский манат",
-    "favourite":0
-  },
-  {
-    "id":"AMD",
-    "name":"Армянский драм",
-    "favourite":0
-  },
-  {
-    "id":"BYN",
-    "name":"Белорусский рубль",
-    "favourite":0
-  },
-  {
-    "id":"BGN",
-    "name":"Болгарский лев",
-    "favourite":0
-  },
-  {
-    "id":"BRL",
-    "name":"Бразильский реал",
-    "favourite":0
-  },
-  {
-    "id":"HUF",
-    "name":"Венгерский форинт",
-    "favourite":0
-  },
-  {
-    "id":"KRW",
-    "name":"Вона Республики Корея",
-    "favourite":0
-  },
-  {
-    "id":"HKD",
-    "name":"Гонконгский доллар",
-    "favourite":0
-  },
-  {
-    "id":"DKK",
-    "name":"Датская крона",
-    "favourite":0
+    "favourite":0,
+    "icon": "russia.svg"
   },
   {
     "id":"USD",
     "name":"Доллар США",
-    "favourite":0
+    "favourite":0,
+    "icon": "united-states-of-america.svg"
   },
   {
     "id":"EUR",
     "name":"ЕВРО",
-    "favourite":0
-  },
-  {
-    "id":"INR",
-    "name":"Индийская рупия",
-    "favourite":0
-  },
-  {
-    "id":"KZT",
-    "name":"Казахстанский тенге",
-    "favourite":0
-  },
-  {
-    "id":"CAD",
-    "name":"Канадский доллар",
-    "favourite":0
-  },
-  {
-    "id":"KGS",
-    "name":"Киргизский сом",
-    "favourite":0
+    "favourite":0,
+    "icon": "european-union.svg"
   },
   {
     "id":"CNY",
     "name":"Китайский юань Жэньминьби",
-    "favourite":0
+    "favourite":0,
+    "icon": "china.svg"
+  },
+  {
+    "id":"AUD",
+    "name":"Австралийский доллар",
+    "favourite":0,
+    "icon": "australia.svg"
+  },
+  {
+    "id":"AZN",
+    "name":"Азербайджанский манат",
+    "favourite":0,
+    "icon": "azerbaijan.svg"
+  },
+  {
+    "id":"AMD",
+    "name":"Армянский драм",
+    "favourite":0,
+    "icon": "armenia.svg"
+  },
+  {
+    "id":"BYN",
+    "name":"Белорусский рубль",
+    "favourite":0,
+    "icon": "belarus.svg"
+  },
+  {
+    "id":"BGN",
+    "name":"Болгарский лев",
+    "favourite":0,
+    "icon": "bulgaria.svg"
+  },
+  {
+    "id":"BRL",
+    "name":"Бразильский реал",
+    "favourite":0,
+    "icon": "brazil.svg"
+  },
+  {
+    "id":"HUF",
+    "name":"Венгерский форинт",
+    "favourite":0,
+    "icon": "hungary.svg"
+  },
+  {
+    "id":"KRW",
+    "name":"Вона Республики Корея",
+    "favourite":0,
+    "icon": "south-korea.svg"
+  },
+  {
+    "id":"HKD",
+    "name":"Гонконгский доллар",
+    "favourite":0,
+    "icon": "hong-kong.svg"
+  },
+  {
+    "id":"DKK",
+    "name":"Датская крона",
+    "favourite":0,
+    "icon": "denmark.svg"
+  },
+  {
+    "id":"INR",
+    "name":"Индийская рупия",
+    "favourite":0,
+    "icon": "india.svg"
+  },
+  {
+    "id":"KZT",
+    "name":"Казахстанский тенге",
+    "favourite":0,
+    "icon": "kazakhstan.svg"
+  },
+  {
+    "id":"CAD",
+    "name":"Канадский доллар",
+    "favourite":0,
+    "icon": "canada.svg"
+  },
+  {
+    "id":"KGS",
+    "name":"Киргизский сом",
+    "favourite":0,
+    "icon": "kyrgyzstan.svg"
   },
   {
     "id":"MDL",
     "name":"Молдавский лей",
-    "favourite":0
+    "favourite":0,
+    "icon": "moldova.svg"
   },
   {
     "id":"TMT",
     "name":"Новый туркменский манат",
-    "favourite":0
+    "favourite":0,
+    "icon": "turkmenistan.svg"
   },
   {
     "id":"NOK",
     "name":"Норвежская крона",
-    "favourite":0
+    "favourite":0,
+    "icon": "norway.svg"
   },
   {
     "id":"PLN",
     "name":"Польский злотый",
-    "favourite":0
+    "favourite":0,
+    "icon": "poland.svg"
   },
   {
     "id":"RON",
     "name":"Румынский лей",
-    "favourite":0
+    "favourite":0,
+    "icon": "romania.svg"
   },
   {
     "id":"XDR",
     "name":"СДР",
-    "favourite":0
+    "favourite":0,
+    "icon": "xdr.svg"
   },
   {
     "id":"SGD",
     "name":"Сингапурский доллар",
-    "favourite":0
+    "favourite":0,
+    "icon": "singapore.svg"
   },
   {
     "id":"TJS",
     "name":"Таджикский сомони",
-    "favourite":0
+    "favourite":0,
+    "icon": "tajikistan.svg"
   },
   {
     "id":"TRY",
     "name":"Турецкая лира",
-    "favourite":0
+    "favourite":0,
+    "icon": "turkey.svg"
   },
   {
     "id":"UZS",
     "name":"Узбекский сум",
-    "favourite":0
+    "favourite":0,
+    "icon": "uzbekistn.svg"
   },
   {
     "id":"UAH",
     "name":"Украинская гривна",
-    "favourite":0
+    "favourite":0,
+    "icon": "ukraine.svg"
   },
   {
     "id":"GBP",
     "name":"Фунт стерлингов",
-    "favourite":0
+    "favourite":0,
+    "icon": "united-kingdom.svg"
   },
   {
     "id":"CZK",
     "name":"Чешская крона",
-    "favourite":0
+    "favourite":0,
+    "icon": "czech-republic.svg"
   },
   {
     "id":"SEK",
     "name":"Шведская крона",
-    "favourite":0
+    "favourite":0,
+    "icon": "sweden.svg"
   },
   {
     "id":"CHF",
     "name":"Швейцарский франк",
-    "favourite":0
+    "favourite":0,
+    "icon": "switzerland.svg"
   },
   {
     "id":"ZAR",
     "name":"Южноафриканский рэнд",
-    "favourite":0
+    "favourite":0,
+    "icon": "south-africa.svg"
   },
   {
     "id":"JPY",
     "name":"Японская йена",
-    "favourite":0
+    "favourite":0,
+    "icon": "japan.svg"
   }
 ]

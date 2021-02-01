@@ -2,6 +2,7 @@
   height: 40px;
   font-size: 22px;
   z-index: 2;
+  text-align: center;
 }
 
 .converter__currency-amount::-webkit-outer-spin-button,

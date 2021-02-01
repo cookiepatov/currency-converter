@@ -33,6 +33,17 @@ function getCurrencyIndex(array, id)
   return -1;
 }
 
+function getIconById(array, id)
+{
+  let result =-1;
+  array.forEach(element => {
+    if (element['id'] === id)
+    {
+      result = element['icon'];
+    }
+  });
+  return result;
+}
 
 function setFavourites(fullArray, favArray)
 {
@@ -57,4 +68,4 @@ function getCurrencyRate(fromRate, toRate) {
   return fromRate/toRate;
 }
 
-export {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate};
+export {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate, getIconById};

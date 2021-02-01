@@ -12,20 +12,21 @@
 
 @media screen and (max-width:700px) {
   .currency-selector {
-    width: calc(100% - 20px);
+    width: calc(100%);
+    border-radius: 0;
+    top: 219px;
   }
 }
 
-
-@media screen and (max-width:690px) {
-  .currency-selector {
-    width: 100%;
-    top: 225px;
-  }
-}
 
 @media screen and (max-width:560px) {
   .currency-selector {
-    top: 190px;
+    top: 197px;
+  }
+}
+
+@media screen and (max-width:440px) {
+  .currency-selector {
+    top: 203px;
   }
 }

@@ -1,6 +1,5 @@
 @import url(../vendor/normalize.css);
 
-
 @import url(../blocks/root/root.css);
 
 @import url(../blocks/header/header.css);
@@ -9,15 +8,17 @@
 @import url(../blocks/top-menu/__link/top-menu__link.css);
 @import url(../blocks/top-menu/__icon/top-menu__icon.css);
 
+@import url(../blocks/content/content.css);
+
 
 @import url(../blocks/converter-section/converter-section.css);
 
-@import url(../blocks/content/content.css);
 @import url(../blocks/converter/converter.css);
 @import url(../blocks/converter/__currency-amount/converter__currency-amount.css);
 @import url(../blocks/converter/__img/converter__img.css);
 @import url(../blocks/converter/__name/converter__name.css);
 @import url(../blocks/converter/__button/converter__button.css);
+@import url(../blocks/converter/__button-img/converter__button-img.css);
 
 @import url(../blocks/footer/footer.css);
 
@@ -33,6 +34,7 @@
 @import url(../blocks/currency-selector/__item-handlers/currency-selector__item-handlers.css);
 @import url(../blocks/currency-selector/__item-name/currency-selector__item-name.css);
 @import url(../blocks/currency-selector/__item/_favourite/currency-selector__item_favourite.css);
+@import url(../blocks/currency-selector/__icon/currency-selector__icon.css);
 @import url(../blocks/currency-selector/__button/currency-selector__button.css);
 @import url(../blocks/currency-selector/__favourite/currency-selector__favourite.css);
 @import url(../blocks/currency-selector/__favourite/_status/currency-selector__favourite_status_active.css);
