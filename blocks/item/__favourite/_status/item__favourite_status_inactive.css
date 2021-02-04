@@ -1,0 +1,10 @@
+.item__favourite_status_inactive {
+  opacity: 0;
+}
+
+
+@media screen and (max-width:560px) {
+  .item__favourite_status_inactive {
+    opacity: 0.2;
+  }
+}

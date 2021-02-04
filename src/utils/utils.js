@@ -11,7 +11,7 @@ function getElement(objectName, type='class', from=document){
 
 function getNameById(array, id)
 {
-  let result =-1;
+  let result = false;
   array.forEach(element => {
     if (element['id'] === id)
     {
@@ -23,19 +23,20 @@ function getNameById(array, id)
 
 function getCurrencyIndex(array, id)
 {
+  let result = false;
   for(let i=0; i<array.length; i++)
   {
     if (array[i]['id'] === id)
     {
-      return i;
+      result = i;
     }
   }
-  return -1;
+  return result;
 }
 
 function getIconById(array, id)
 {
-  let result =-1;
+  let result = false;
   array.forEach(element => {
     if (element['id'] === id)
     {

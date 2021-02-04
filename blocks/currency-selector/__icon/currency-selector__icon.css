@@ -2,10 +2,3 @@
   width: 20px;
   margin-right: 25px;
 }
-
-
-.currency-selector__icon:focus {
-  outline: 0;
-  opacity: 0.5;
-}
-

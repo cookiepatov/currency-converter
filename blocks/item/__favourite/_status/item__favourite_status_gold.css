@@ -1,0 +1,4 @@
+.item__favourite_status_gold {
+  opacity: 1;
+  filter: invert(79%) sepia(69%) saturate(2256%) hue-rotate(3deg) brightness(105%) contrast(110%);
+}

@@ -1,0 +1,32 @@
+.item__base {
+  justify-self: end;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-image: url(../../../images/up-arrow.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  filter: invert(1);
+  opacity: 0;
+  cursor: pointer;
+  transition: transform 0.05s ease-in, opacity 0.1s ease-in;
+  margin: 0;
+  padding: 0;
+}
+
+
+.item__base:hover {
+  transform: scale(1.1);
+}
+
+.item__base:focus {
+  outline: 0;
+  opacity: 0.5;
+}
+
+
+@media screen and (max-width:560px) {
+  .item__base {
+    opacity: 0.5;
+  }
+}

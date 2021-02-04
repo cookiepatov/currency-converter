@@ -21,12 +21,38 @@
         </a>
       </nav>
     </header>
-    <main>
+    <main class="content">
+      <section class="currencies">
+        <h2 class="currencies__section">
+          Базовая валюта:
+        </h2>
+        <div class="item" id="base">
+          <img src="./images/country-icons/russia.svg" class="item__icon">
+          <p class="item__name">RUB</p>
+          <p class="item__description">Российский рубль</p>
+        </div>
+        <h2 class="currencies__section">
+          Курсы валют:
+        </h2>
+        <div class="currencies__container">
+        </div>
+      </section>
     </main>
     <footer class="footer">
+      <p class="copyright">&copy; 2021. Евгений Рейнат</p>
     </footer>
   </div>
-<!--   <script type="module" src="src/main.js"></script> -->
+  <script type="module" src="src/currency.js"></script>
+  <template id="template-item">
+    <div class="item">
+      <img src="./images/country-icons/russia.svg" class="item__icon">
+      <p class="item__name">RUB</p>
+      <button class="item__base" type="button"></button>
+      <p class="item__description">Российский рубль</p>
+      <button class="item__favourite" type="button"></button>
+      <p class="item__rate">1.00 RUB = 1.00 RUB</p>
+    </div>
+  </template>
 </body>
 
 </html>

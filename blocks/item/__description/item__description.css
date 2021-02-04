@@ -1,0 +1,6 @@
+.item__description {
+  grid-column-start: initial;
+  grid-column-end: span 2;
+  color: white;
+  margin: 0;
+}

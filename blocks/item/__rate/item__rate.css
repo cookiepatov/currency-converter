@@ -1,0 +1,7 @@
+.item__rate {
+  grid-column-start: initial;
+  grid-column-end: span 3;
+  color: white;
+  margin: 0;
+  font-size: 12px;
+}

@@ -10,4 +10,21 @@
 
 @import url(../blocks/content/content.css);
 
+@import url(../blocks/currencies/currencies.css);
+@import url(../blocks/currencies/__section/currencies__section.css);
+@import url(../blocks/currencies/__container/currencies__container.css);
+@import url(../blocks/item/item.css);
+@import url(../blocks/item/__name/item__name.css);
+@import url(../blocks/item/__base/item__base.css);
+@import url(../blocks/item/__rate/item__rate.css);
+@import url(../blocks/item/__description/item__description.css);
+@import url(../blocks/item/__icon/item__icon.css);
+@import url(../blocks/item/__favourite/item__favourite.css);
+@import url(../blocks/item/__favourite/_status/item__favourite_status_active.css);
+@import url(../blocks/item/__favourite/_status/item__favourite_status_gold.css);
+@import url(../blocks/item/__favourite/_status/item__favourite_status_inactive.css);
+
+
 @import url(../blocks/footer/footer.css);
+
+@import url(../blocks/copyright/copyright.css);

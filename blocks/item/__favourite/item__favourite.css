@@ -1,0 +1,27 @@
+.item__favourite {
+  background-color: transparent;
+  border: none;
+  background-image: url(../../../images/star.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.05s ease-in, opacity 0.1s ease-in;
+  filter: invert(1);
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+.item__favourite:hover {
+  transform: scale(1.1);
+}
+
+.item__favourite:focus {
+  outline: 0;
+  opacity: 0.5;
+}
