@@ -1,7 +1,6 @@
 import getData from './api/converter.js';
 import getUserInfo from './api/local.js'
 import {getElement, getCurrenciesInfo, getCurrencyIndex, setFavourites, getNameById, getCurrencyRate, getIconById} from './utils/utils.js';
-
 const btnFrom = getElement('currency-from-selector','id');
 const btnTo = getElement('currency-to-selector','id');
 const currencySelector = getElement('currency-selector');
@@ -47,9 +46,9 @@ function init()
   inputFrom.value='0.00'
   getUserInfo().then(userCurrency=>{
     currencyFrom = userCurrency['currency']['code'];
-    btnFrom.innerHTML=` <img src="/images/country-icons/${getIconById(currentData, currencyFrom)}" class="converter__button-img" alt="Иконка валюты">
+    btnFrom.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currencyFrom)}" class="converter__button-img" alt="Иконка валюты">
     ${currencyFrom}`;
-    btnTo.innerHTML=` <img src="/images/country-icons/${getIconById(currentData, currencyTo)}" class="converter__button-img" alt="Иконка валюты">
+    btnTo.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currencyTo)}" class="converter__button-img" alt="Иконка валюты">
     ${currencyTo}`;
   })
   updateCurrentRate();
@@ -164,14 +163,14 @@ function addToFavourites(id, title, icon) {
 function setCurrency(currency) {
   if(btnTo.attributes.disabled)
   {
-    btnFrom.innerHTML=` <img src="/images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
+    btnFrom.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
     ${currency}`;
     currencyFrom = currency;
   }
   else
   {
 
-    btnTo.innerHTML=` <img src="/images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
+    btnTo.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
     ${currency}`;
     currencyTo = currency;
   }
