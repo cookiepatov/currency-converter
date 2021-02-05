@@ -43,6 +43,15 @@ function updateResult(e)
 }
 function init()
 {
+  getCurrenciesInfo('src/data/currencies.json').then(function(data){
+    currentData = data;
+    setFavourites(currentData, favourites);
+    data.forEach(element => {
+      addCurrency(element);
+      currencyListAll.addEventListener('click', currencyHandler);
+      currencyListFavs.addEventListener('click', currencyHandler);
+    });
+  })
   inputFrom.value='0.00'
   getUserInfo().then(userCurrency=>{
     currencyFrom = userCurrency['currency']['code'];
@@ -60,15 +69,6 @@ function init()
       addFavourite(element);
     })
   }
-  getCurrenciesInfo('src/data/currencies.json').then(function(data){
-    currentData = data;
-    setFavourites(currentData, favourites);
-    data.forEach(element => {
-      addCurrency(element);
-      currencyListAll.addEventListener('click', currencyHandler);
-      currencyListFavs.addEventListener('click', currencyHandler);
-    });
-  })
   btnFrom.addEventListener('click',togglePopup);
   btnTo.addEventListener('click',togglePopup);
   inputFrom.addEventListener('input',updateResult);
