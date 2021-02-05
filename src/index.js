@@ -147,7 +147,7 @@ function addToFavourites(id, title, icon) {
   <li class="currency-selector__item" id="${id}">
     <div class="currency-selector__item-handlers">
       <button type="button" data="${id}" title="${title}" class="currency-selector__button">
-        <img class="currency-selector__icon" data="${id}" alt="${title}" src="../images/country-icons/${icon}">
+        <img class="currency-selector__icon" data="${id}" alt="${title}" src="src/country-icons/${icon}">
         ${id}
       </button>
       <button type="button" data="${id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
@@ -189,7 +189,7 @@ function addCurrency(element) {
   <li class="currency-selector__item" id="${element.id}">
     <div class="currency-selector__item-handlers">
       <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">
-        <img class="currency-selector__icon" data="${element.id}" alt="${element.name}" src="../images/country-icons/${element.icon}">
+        <img class="currency-selector__icon" data="${element.id}" alt="${element.name}" src="src/country-icons/${element.icon}">
         ${element.id}
       </button>
       <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_${favourite}"></button>
