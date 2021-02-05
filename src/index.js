@@ -46,9 +46,9 @@ function init()
   inputFrom.value='0.00'
   getUserInfo().then(userCurrency=>{
     currencyFrom = userCurrency['currency']['code'];
-    btnFrom.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currencyFrom)}" class="converter__button-img" alt="Иконка валюты">
+    btnFrom.innerHTML=` <img src="../../images/country-icons/${getIconById(currentData, currencyFrom)}" class="converter__button-img" alt="Иконка валюты">
     ${currencyFrom}`;
-    btnTo.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currencyTo)}" class="converter__button-img" alt="Иконка валюты">
+    btnTo.innerHTML=` <img src="../../images/country-icons/${getIconById(currentData, currencyTo)}" class="converter__button-img" alt="Иконка валюты">
     ${currencyTo}`;
   })
   updateCurrentRate();
@@ -163,14 +163,14 @@ function addToFavourites(id, title, icon) {
 function setCurrency(currency) {
   if(btnTo.attributes.disabled)
   {
-    btnFrom.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
+    btnFrom.innerHTML=` <img src="../../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
     ${currency}`;
     currencyFrom = currency;
   }
   else
   {
 
-    btnTo.innerHTML=` <img src="../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
+    btnTo.innerHTML=` <img src="../../images/country-icons/${getIconById(currentData, currency)}" class="converter__button-img" alt="Иконка валюты">
     ${currency}`;
     currencyTo = currency;
   }
@@ -205,7 +205,7 @@ function addFavourite(element) {
   <li class="currency-selector__item" id="${element.id}">
     <div class="currency-selector__item-handlers">
       <button type="button" data="${element.id}" title="${element.name}" class="currency-selector__button">
-        <img class="currency-selector__icon" data="${element.id}" alt="${element.name}" src="../images/country-icons/${element.icon}">
+        <img class="currency-selector__icon" data="${element.id}" alt="${element.name}" src="../../images/country-icons/${element.icon}">
         ${element.id}
       </button>
       <button type="button" data="${element.id}" class="currency-selector__favourite currency-selector__favourite_status_gold"></button>
