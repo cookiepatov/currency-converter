@@ -2,6 +2,7 @@ import getData from './api/converter.js';
 import getUserInfo from './api/local.js';
 import {getElement, getCurrenciesInfo, getCurrencyIndex, getNameById, getCurrencyRate, getIconById} from './utils/utils.js';
 
+
 const templateItem = getElement('template-item','id').content;
 const currenciesContainer = getElement('currencies__container');
 let currentData;
@@ -43,7 +44,7 @@ function updateBase(id=base)
     const icon = getElement('item__icon','class', baseEl);
     const name = getElement('item__name','class', baseEl);
     const description = getElement('item__description','class',baseEl);
-    icon.src = '../images/country-icons/'+getIconById(data,id);
+    icon.src = '/images/country-icons/'+getIconById(data,id);
     icon.alt = getNameById(data,id);
     name.textContent = id;
     description.textContent = getNameById(data,id);
@@ -115,7 +116,7 @@ function addCurrency(element) {
   const rate = getElement('item__rate','class',newElement);
   const favStatus = getElement('item__favourite','class',newElement);
   const baseBtn = getElement('item__base', 'class', newElement);
-  icon.src='../images/country-icons/'+element.icon;
+  icon.src='/images/country-icons/'+element.icon;
   icon.alt=element.name;
   name.textContent=element.id;
   description.textContent=element.name;
@@ -139,10 +140,6 @@ function addCurrency(element) {
     updateBase(element.id);
   })
   currenciesContainer.append(newElement);
-}
-
-function addFavourite(element) {
-  //TODO
 }
 
 init()
