@@ -61,7 +61,6 @@ function init()
     ${currencyTo}`;
   })
   updateCurrentRate();
-  getUserInfo();
   if(getLocalStorage())
   {
     favourites = getLocalStorage();
